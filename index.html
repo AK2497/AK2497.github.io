@@ -67,7 +67,7 @@
     RB.setAttribute("type","radio");
     RB.setAttribute("id", Math.random().toString(36).substring(7));
 	RB.setAttribute("name", "gender");
-	RB.setAttribute("value", "male");
+	RB.setAttribute("value", Math.random().toString(36).substring(7));
      
     var label1 = document.createElement("label");
           label1.htmlFor = RB.id;
@@ -75,9 +75,9 @@
           
           var CB = document.createElement("input");
     CB.setAttribute("type","checkbox");
-    CB.setAttribute("id",Math.random().toString(36).substring(7));
+    CB.setAttribute("value",Math.random().toString(36).substring(7));
 	CB.setAttribute("name", "gender");
-	CB.setAttribute("value", "female");
+
      
     var label2 = document.createElement("label");
           label2.htmlFor = RB.id;
