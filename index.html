@@ -21,7 +21,7 @@
 	var br = document.createElement("br");
 	function GFG_Fun() {
 	
-    for(let i = 0; i<=200; i++) {
+    for(let i = 0; i<=2; i++) {
 	// Create a form synamically
 	var form = document.createElement("form");
 	form.setAttribute("method", "post");
@@ -66,7 +66,7 @@
     var RB = document.createElement("input");
     RB.setAttribute("type","radio");
     RB.setAttribute("id", Math.random().toString(36).substring(7));
-	RB.setAttribute("name", "gender");
+	RB.setAttribute("name", Math.random().toString(36).substring(7));
 	RB.setAttribute("value", Math.random().toString(36).substring(7));
      
     var label1 = document.createElement("label");
@@ -76,7 +76,7 @@
           var CB = document.createElement("input");
     CB.setAttribute("type","checkbox");
     CB.setAttribute("value",Math.random().toString(36).substring(7));
-	CB.setAttribute("name", "gender");
+	CB.setAttribute("name", "Math.random().toString(36).substring(7)");
 
      
     var label2 = document.createElement("label");
