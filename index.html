@@ -21,63 +21,47 @@
 	var br = document.createElement("br");
 	function GFG_Fun() {
 	
-    for(let i = 0; i<=10000; i++) {
+    for(let i = 0; i<=50; i++) {
 	// Create a form synamically
 	var form = document.createElement("form");
 	form.setAttribute("method", "post");
 	form.setAttribute("action", "submit.php");
-
+	form.setAttribute("id",i)
 	// Create an input element for Full Name
 	var FN = document.createElement("input");
 	FN.setAttribute("type", "text");
-	FN.setAttribute("name", "FullName");
 	FN.setAttribute("placeholder", "Full Name");
-    FN.setAttribute("id",Math.random().toString(36).substring(7))
 
 	// Create an input element for date of birth
 	var DOB = document.createElement("input");
 	DOB.setAttribute("type", "text");
-	DOB.setAttribute("name", "dob");
 	DOB.setAttribute("placeholder", "DOB");
-    DOB.setAttribute("id",Math.random().toString(36).substring(7));
 
 	// Create an input element for emailID
 	var EID = document.createElement("input");
 	EID.setAttribute("type", "text");
-	EID.setAttribute("name", "emailID");
 	EID.setAttribute("placeholder", "E-Mail ID");
-    EID.setAttribute("id",Math.random().toString(36).substring(7));
 
 	// Create an input element for password
 	var PWD = document.createElement("input");
 	PWD.setAttribute("type", "password");
-	PWD.setAttribute("name", "password");
 	PWD.setAttribute("placeholder", "Password");
-    PWD.setAttribute("id",Math.random().toString(36).substring(7));
-    
+
 
 	// Create an input element for retype-password
 	var RPWD = document.createElement("input");
 	RPWD.setAttribute("type", "password");
-	RPWD.setAttribute("name", "reTypePassword");
 	RPWD.setAttribute("placeholder", "ReEnter Password");
-    RPWD.setAttribute("id",Math.random().toString(36).substring(7));
     
     var RB = document.createElement("input");
     RB.setAttribute("type","radio");
     RB.setAttribute("id", Math.random().toString(36).substring(7));
-	RB.setAttribute("name", Math.random().toString(36).substring(7));
-	RB.setAttribute("value", Math.random().toString(36).substring(7));
-     
     var label1 = document.createElement("label");
           label1.htmlFor = RB.id;
 		  label1.innerHTML = 'label for radio';
           
           var CB = document.createElement("input");
     CB.setAttribute("type","checkbox");
-    CB.setAttribute("value",Math.random().toString(36).substring(7));
-	CB.setAttribute("name", Math.random().toString(36).substring(7));
-
      
     var label2 = document.createElement("label");
           label2.htmlFor = RB.id;
@@ -87,9 +71,7 @@
 				// create a submit button
           var s = document.createElement("input");
 		  s.setAttribute("type", "submit");
-		  s.setAttribute("value", "Submit");
-          s.setAttribute("id",Math.random().toString(36).substring(7));
-                
+		  s.setAttribute("value", "Submit");  
           
 
             
@@ -127,9 +109,13 @@
 				
 				// Append the submit button to the form
 				form.appendChild(s);
-
-				document.getElementsByTagName("body")[0]
-			.appendChild(form);
+           //	if(document.getElementById(""))
+           if(i=="0") {
+				document.getElementById("Aboli").appendChild(form);
+            }
+            else{
+            	document.getElementById(i-1).appendChild(form);
+            }
             }
 			}
 		</script>
