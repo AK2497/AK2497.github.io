@@ -20,13 +20,12 @@
 	// Create a break line element
 	var br = document.createElement("br");
 	function GFG_Fun() {
-	
-    for(let i = 0; i<=50; i++) {
+	var tr = document.getElementById("Aboli");
+    for(let i = 0; i<=100; i++) {
 	// Create a form synamically
 	var form = document.createElement("form");
 	form.setAttribute("method", "post");
 	form.setAttribute("action", "submit.php");
-	form.setAttribute("id",i)
 	// Create an input element for Full Name
 	var FN = document.createElement("input");
 	FN.setAttribute("type", "text");
@@ -55,17 +54,10 @@
     
     var RB = document.createElement("input");
     RB.setAttribute("type","radio");
-    RB.setAttribute("id", Math.random().toString(36).substring(7));
-    var label1 = document.createElement("label");
-          label1.htmlFor = RB.id;
-		  label1.innerHTML = 'label for radio';
           
           var CB = document.createElement("input");
     CB.setAttribute("type","checkbox");
      
-    var label2 = document.createElement("label");
-          label2.htmlFor = RB.id;
-		  label2.innerHTML = 'label for checkbox';
 
 
 				// create a submit button
@@ -99,22 +91,24 @@
 				form.appendChild(br.cloneNode());
                 form.appendChild(RB);
 				form.appendChild(br.cloneNode());
-                form.appendChild(label1);
-				form.appendChild(br.cloneNode());
+            
                 form.appendChild(CB);
 				form.appendChild(br.cloneNode());
-                form.appendChild(label2);
-				form.appendChild(br.cloneNode());
+
                 
 				
 				// Append the submit button to the form
 				form.appendChild(s);
            //	if(document.getElementById(""))
            if(i=="0") {
-				document.getElementById("Aboli").appendChild(form);
+			 tr = document.getElementById("Aboli");	
+          document.getElementById("Aboli").appendChild(form);
             }
             else{
-            	document.getElementById(i-1).appendChild(form);
+            	
+var corner_td = tr.lastChild;
+tr=corner_td
+               tr.appendChild(form);
             }
             }
 			}
