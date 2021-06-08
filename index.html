@@ -6,21 +6,22 @@
 		</title>
 	</head>
 	<body style="text-align: center;">
-		<p>
-		Click on the button to create
-		a form dynamically
-		</p>
-		<button onClick="GFG_Fun()">
+      <button onClick="Fun1()">
 			click here
 		</button>
-		<p id="Aboli"></p>
+		<p>
+		Click on the button to create
+		a form dynamically abboli
+		</p>
+		
+		<p ></p>
 <script>
-	var down = document.getElementById("aboli");
+	
 			
 	// Create a break line element
 	var br = document.createElement("br");
-	function GFG_Fun() {
-	var tr = document.getElementById("Aboli");
+	function Fun1() {
+	var tr = document.body;
     for(let i = 0; i<=100; i++) {
 	// Create a form synamically
 	var form = document.createElement("form");
@@ -101,8 +102,8 @@
 				form.appendChild(s);
            //	if(document.getElementById(""))
            if(i=="0") {
-			 tr = document.getElementById("Aboli");	
-          document.getElementById("Aboli").appendChild(form);
+			 tr = document.body
+         tr.appendChild(form);
             }
             else{
             	
