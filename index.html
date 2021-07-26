@@ -5,7 +5,7 @@
 
 var wrapper = document.createElement( 'div' )
 var shadow = wrapper.attachShadow( {mode: 'open'} )
-shadow.innerHTML = '<button onclick="this.getRootNode().foo()">Button in shadow dom</button>'
+shadow.innerHTML = '<button onclick="this.getRootNode().foo()">Button</button>'
 document.body.appendChild( wrapper )
 shadow.foo = function() {
   myDivObj = document.body
