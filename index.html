@@ -1,17 +1,31 @@
 
-
+<!doctype html>
+<body>
 <script>
-	customElements.define('show-hello', class extends HTMLElement {
-	  connectedCallback() {
-		const shadow = this.attachShadow({mode: 'open'});
-		shadow.innerHTML = `<p>
-		  Hello, ${this.getAttribute('name')}
-		</p>`;
-	  }
-	});
-	</script>
-	
-	<show-hello name="Aboli"></show-hello>
+
+var wrapper = document.createElement( 'div' )
+var shadow = wrapper.attachShadow( {mode: 'open'} )
+shadow.innerHTML = '<button onclick="this.getRootNode().foo()">Click</button>'
+document.body.appendChild( wrapper )
+shadow.foo = function() {
+  myDivObj = document.body
+let myDivObjBgColor = window.getComputedStyle(myDivObj).backgroundColor;
+  if(myDivObjBgColor.toString() != "rgb(255, 255, 0)"){
+  document.body.style.background = "yellow";
+  }
+  else {
+    document.body.style.background = "green";
+  }
+    
+  console.log("Do Something",myDivObjBgColor.toString())
+}
+
+</script>
+
+
+</body>
+
+
 
 <!-- <!DOCTYPE html>
 	<a href="http://kanishkkunal.com" 
