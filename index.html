@@ -24,7 +24,59 @@
 
 
 </body>
+<style>
+    h1 { 
+        font-size: 1.2em;
+        font-family: sans-serif;
+        color: darkorange;
+        }
+    dl { 
+        border-left: 3px solid darkorange; 
+        padding-left: 1em; }
+    dt { font-weight: bold; }
+    dd { color: darkslategray; }
+</style>
+<template>
+    <h1><slot name="heading"></slot></h1>
+    <dl>
+        <dt><slot name="term-1"></slot></dt>
+        <dd><slot name="description-1"></slot></dd>
+        <dt><slot name="term-2"></slot></dt>
+        <dd><slot name="description-2"></slot></dd>
+        <dt><slot name="term-3"></slot></dt>
+        <dd><slot name="description-3"></slot></dd>
+    </dl>
+</template>
 
+<div>
+    <span slot="heading">Web Terms</span>
+    <span slot="term-1">HTML</span>
+    <span slot="description-1">HyperText Markup Language</span>
+    <span slot="term-2">CSS</span>
+    <span slot="description-2">Cascading Style Sheets</span>
+    <span slot="term-3">SQL</span>
+    <span slot="description-3">Structured Query Language</span>
+</div>
+
+<h1>Medical Terms</h1>
+<dl>
+    <dt>AF</dt>
+    <dd>Atrial Fibrillation</dd>
+    <dt>CPR</dt>
+    <dd>Cardiopulmonary Resuscitation</dd>
+    <dt>PAH</dt>
+    <dd>Pulmonary Arterial Hypertension</dd>
+</dl>
+
+<script>
+  var dlTemplate = document.querySelector('template').content;
+  var divs = document.querySelectorAll('div');
+ 
+  divs.forEach(function(div){
+    div.attachShadow({  mode: 'open' }).appendChild(
+        dlTemplate.cloneNode(true))
+  });
+</script>
 
 <!-- <!DOCTYPE html>
 	<a href="http://kanishkkunal.com" 
