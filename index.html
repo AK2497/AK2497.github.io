@@ -2,7 +2,7 @@
 
 <body>
 	<script>
-		for (let i = 0; i < 3; i++) {
+		
 			var wrapper = document.createElement('div')
 			var shadow = wrapper.attachShadow({ mode: 'open' })
 			shadow.innerHTML = '<input style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" ></input><button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;">Button</button> <button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid red;padding: 10px;">Button1</button> <button style= "margin-bottom: 30px; width: 50%;border: 3px solid blue;padding: 10px;" onclick="this.getRootNode().foo()">Button2</button>'
@@ -19,7 +19,22 @@
 
 				console.log("Do Something", myDivObjBgColor.toString())
 			}
-		}
+			var wrapper1 = document.createElement('div')
+			var shadow1 = wrapper.attachShadow({ mode: 'open' })
+			shadow1.innerHTML = '<input style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" ></input><button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;">Button</button> <button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid red;padding: 10px;">Button1</button> <button style= "margin-bottom: 30px; width: 50%;border: 3px solid blue;padding: 10px;" onclick="this.getRootNode().foo()">Button2</button>'
+			document.body.appendChild(wrapper1)
+			shadow1.foo = function () {
+				myDivObj = document.body
+				let myDivObjBgColor = window.getComputedStyle(myDivObj).backgroundColor;
+				if (myDivObjBgColor.toString() != "rgb(255, 255, 0)") {
+					document.body.style.background = "pink";
+				}
+				else {
+					document.body.style.background = "green";
+				}
+
+				console.log("Do Something", myDivObjBgColor.toString())
+			}
 	</script>
 
 
