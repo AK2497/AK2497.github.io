@@ -5,7 +5,7 @@
 		for (let i = 0; i < 3; i++) {
 			var wrapper = document.createElement('div')
 			var shadow = wrapper.attachShadow({ mode: 'open' })
-			shadow.innerHTML = '<input style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;">Button</button> <button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid red;padding: 10px;">Button1</button> <button style= "margin-bottom: 30px; width: 50%;border: 3px solid blue;padding: 10px;" onclick="this.getRootNode().foo()">Button2</button>'
+			shadow.innerHTML = '<input style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" ></input><button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;">Button</button> <button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid red;padding: 10px;">Button1</button> <button style= "margin-bottom: 30px; width: 50%;border: 3px solid blue;padding: 10px;" onclick="this.getRootNode().foo()">Button2</button>'
 			document.body.appendChild(wrapper)
 			shadow.foo = function () {
 				myDivObj = document.body
@@ -24,6 +24,7 @@
 
 
 </body>
+<!--
 <style>
     h1 { 
         font-size: 1.2em;
@@ -78,7 +79,7 @@
   });
 </script>
 
-<!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 	<a href="http://kanishkkunal.com" 
 target="popup" 
 onclick="window.open('https://www.flipkart.com/','popup','width=600,height=600'); return false;">
