@@ -3,7 +3,8 @@
 <body>
 	<iframe src="https://www.javatpoint.com/oprweb/test.jsp?filename=htmliframes" aboli123="text1"  width="500" height="500" title=" appium "></iframe>
 	<a aboli+1 = "aboli1">hello1  </a>
-	<script>
+	
+<script>
 		var wrapper=[];
 		var shadow=[];
 		var samplev = Math.floor(Math.random() * 100);
@@ -13,8 +14,10 @@
 			 shadow[i] = wrapper[i].attachShadow({ mode: 'open' });
 			let para = document.createElement('p');
 			shadow[i].appendChild(para);
-			shadow[i].innerHTML = '<a [samplev]+k{k} = "aboli1">hello  </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;">Button</button> <button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid red;padding: 10px;">Button1</button> <button style= "margin-bottom: 30px; width: 50%;border: 3px solid blue;padding: 10px;" onclick="this.getRootNode().foo()">Button2</button>'
+			shadow[i].innerHTML = '<a>hello  </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;">Button</button> <button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid red;padding: 10px;">Button1</button> <button style= "margin-bottom: 30px; width: 50%;border: 3px solid blue;padding: 10px;" onclick="this.getRootNode().foo()">Button2</button>'
 			document.body.appendChild(wrapper[i])
+            var z= document.getElementsByTagName('div')[0].shadowRoot.querySelector('a').setAttribute("aboli"+samplev,"aa")
+    		console.log(z)
 			shadow[i].foo = function () {
 				myDivObj = document.body
 				let myDivObjBgColor = window.getComputedStyle(myDivObj).backgroundColor;
