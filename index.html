@@ -2,13 +2,15 @@
 
 <body>
 	<iframe src="https://www.javatpoint.com/oprweb/test.jsp?filename=htmliframes" aboli123="text1"  width="500" height="500" title=" appium "></iframe>
+	<a aboli+1 = "aboli1">hello1  </a>
 	<script>
 		var wrapper=[];
 		var shadow=[];
+		var samplev = Math.floor(Math.random() * 100);
 		for (let i = 0; i < 1; i++) {
 			 wrapper[i] = document.createElement('div')
 			 shadow[i] = wrapper[i].attachShadow({ mode: 'open' })
-			shadow[i].innerHTML = '<a aboli+1 = "aboli1">hello  </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;">Button</button> <button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid red;padding: 10px;">Button1</button> <button style= "margin-bottom: 30px; width: 50%;border: 3px solid blue;padding: 10px;" onclick="this.getRootNode().foo()">Button2</button>'
+			shadow[i].innerHTML = '<a [samplev] = "aboli1">hello  </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;">Button</button> <button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid red;padding: 10px;">Button1</button> <button style= "margin-bottom: 30px; width: 50%;border: 3px solid blue;padding: 10px;" onclick="this.getRootNode().foo()">Button2</button>'
 			document.body.appendChild(wrapper[i])
 			shadow[i].foo = function () {
 				myDivObj = document.body
