@@ -12,7 +12,7 @@
 			 wrapper[i] = document.createElement('div')
 			 shadow[i] = wrapper[i].attachShadow({ mode: 'open' });
 			let para = document.createElement('p');
-			shadow.appendChild(para);
+			shadow[i].appendChild(para);
 			shadow[i].innerHTML = '<a [samplev]+k = "aboli1">hello  </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;">Button</button> <button onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid red;padding: 10px;">Button1</button> <button style= "margin-bottom: 30px; width: 50%;border: 3px solid blue;padding: 10px;" onclick="this.getRootNode().foo()">Button2</button>'
 			document.body.appendChild(wrapper[i])
 			shadow[i].foo = function () {
