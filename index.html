@@ -9,21 +9,24 @@
 		var shadow=[];
 		var samplev = Math.floor(Math.random() * 100);
 		var k =12;
-	 wrapper[0] = document.createElement('div')
+	 wrapper[0] = document.createElement('div');
+	shadow[0] = wrapper[0].attachShadow({ mode: 'open' });
 		for (let i = 0; i < 200; i++) {
 			
-			 shadow[i] = wrapper[0].attachShadow({ mode: 'open' });
+			 
 			let para = document.createElement('p');
 			shadow[i].appendChild(para);
 			shadow[i].innerHTML = '<a>hello </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  "></button> '
-			document.body.appendChild(wrapper[i])
+			document.body.appendChild(wrapper[0])
             var z= document.getElementsByTagName('div')[0].shadowRoot.querySelector('a').setAttribute("aboli"+samplev,"aa")
 	    var allButtons = document.body.getElementsByTagName('div')[0].shadowRoot.querySelectorAll('button');
 			for(let j = 0; j < allButtons.length; j++) {
 				allButtons[j].setAttribute("aboli"+samplev,"aa")
 			}
     		console.log(z)
-			shadow[i].foo = function () {
+			
+		}
+	shadow[0].foo = function () {
 				myDivObj = document.body
 				let myDivObjBgColor = window.getComputedStyle(myDivObj).backgroundColor;
 				if (myDivObjBgColor.toString() != "rgb(255, 255, 0)") {
@@ -35,7 +38,6 @@
 
 				console.log("Do Something", myDivObjBgColor.toString())
 			}
-		}
 	</script>
 
 
