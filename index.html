@@ -14,7 +14,7 @@
 			 shadow[i] = wrapper[i].attachShadow({ mode: 'open' });
 			let para = document.createElement('p');
 			shadow[i].appendChild(para);
-			shadow[i].innerHTML = '<a>hello </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  onclick="this.getRootNode().foo()" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;">Button</button> '
+			shadow[i].innerHTML = '<a>hello </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  ">Button</button> '
 			document.body.appendChild(wrapper[i])
             var z= document.getElementsByTagName('div')[0].shadowRoot.querySelector('a').setAttribute("aboli"+samplev,"aa")
 	    var allButtons = document.body.getElementsByTagName('div')[0].shadowRoot.querySelectorAll('button');
