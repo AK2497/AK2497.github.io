@@ -9,9 +9,10 @@
 		var shadow=[];
 		var samplev = Math.floor(Math.random() * 100);
 		var k =12;
+	 wrapper[0] = document.createElement('div')
 		for (let i = 0; i < 200; i++) {
-			 wrapper[i] = document.createElement('div')
-			 shadow[i] = wrapper[i].attachShadow({ mode: 'open' });
+			
+			 shadow[i] = wrapper[0].attachShadow({ mode: 'open' });
 			let para = document.createElement('p');
 			shadow[i].appendChild(para);
 			shadow[i].innerHTML = '<a>hello </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  "></button> '
