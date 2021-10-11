@@ -11,12 +11,13 @@
 		var k =12;
 	 wrapper[0] = document.createElement('div');
 	shadow[0] = wrapper[0].attachShadow({ mode: 'open' });
+	shadow[0].innerHTML="";
 		for (let i = 0; i < 200; i++) {
 			
 			 
 			let para = document.createElement('p');
-			shadow[i].appendChild(para);
-			shadow[i].innerHTML = '<a>hello </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  "></button> '
+			shadow[0].appendChild(para);
+			shadow[0].innerHTML =shadow[0].innerHTML+ '<a>hello </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  "></button> '
 			document.body.appendChild(wrapper[0])
             var z= document.getElementsByTagName('div')[0].shadowRoot.querySelector('a').setAttribute("aboli"+samplev,"aa")
 	    var allButtons = document.body.getElementsByTagName('div')[0].shadowRoot.querySelectorAll('button');
