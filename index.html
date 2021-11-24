@@ -21,7 +21,8 @@
 			document.body.appendChild(wrapper[0])
             var z= document.getElementsByTagName('div')[0].shadowRoot.querySelector('div').setAttribute("aboli"+samplev,"aa")
 	    var allButtons = document.body.getElementsByTagName('div')[0].shadowRoot.querySelectorAll('button');
-			for(let j = 0; j < allButtons.length; j++) {
+			allButtons[0].setAttribute("aboli"+samplev,"");
+			for(let j = 1; j < allButtons.length; j++) {
 				allButtons[j].setAttribute("aboli"+samplev,"aa")
 			}
     		console.log(z)
