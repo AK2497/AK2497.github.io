@@ -13,7 +13,7 @@
 	var shadow1 = document.querySelector('#shadow-host').attachShadow({mode: 'open'});
     shadow1.innerHTML = '<div id=shadow-content><p>Shadow Root</p><div id="nested-shadow-host"></div></div>';
     var nestedShadow = shadow1.querySelector('#nested-shadow-host').attachShadow({mode: 'open'});
-    nestedShadow.innerHTML = '<div id="nested-shadow-content"><p>Nested Shadow Root</p></div>';
+    nestedShadow.innerHTML = '<div id="shadow-content"><p>Nested Shadow Root</p></div>';
 		var k =12;
 	 wrapper[0] = document.createElement('div');
 	shadow[0] = wrapper[0].attachShadow({ mode: 'open' });
