@@ -11,9 +11,9 @@
 		var shadow=[];
 		var samplev = Math.floor(Math.random() * 100);
 	var shadow1 = document.querySelector('#shadow-host').attachShadow({mode: 'open'});
-    shadow1.innerHTML = '<div id=shadow-content><p>Shadow Root</p><div id="nested-shadow-host"></div></div>';
+    shadow1.innerHTML = '<a aboli+1 = "aboli1">hello1  </a><div><a>hello </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  "></button></div ';
     var nestedShadow = shadow1.querySelector('#nested-shadow-host').attachShadow({mode: 'open'});
-    nestedShadow.innerHTML = '<div id="nested-shadow-content"><p>Nested Shadow Root</p></div>';
+    nestedShadow.innerHTML = '<a aboli+1 = "aboli1">hello1  </a><div><a>hello </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli" "></input><button  "></button></div ';
 		var k =12;
 	 wrapper[0] = document.createElement('div');
 	shadow[0] = wrapper[0].attachShadow({ mode: 'open' });
