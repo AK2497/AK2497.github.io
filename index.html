@@ -6,8 +6,17 @@
 	
 	<a aboli+1 = "aboli1">hello1  </a>
 	<div id='shadow-host'> </div>
+	<div id='shadow-host1'></div>
 <script>
-		var wrapper=[];
+	var shadow1 = document.querySelector('#shadow-host').attachShadow({mode: 'open'});
+    shadow1.innerHTML = '<div id=shadow-content><p>Shadow Root</p><div id="nested-shadow-host"></div></div>';
+    var nestedShadow = shadow1.querySelector('#nested-shadow-host').attachShadow({mode: 'open'});
+    nestedShadow.innerHTML = '<div id="nested-shadow-content"><p>Nested Shadow Root</p></div>';	
+	var shadow2 = document.querySelector('#shadow-host1').attachShadow({mode: 'open'});
+    shadow2.innerHTML = '<div id=shadow-content><p>Shadow Root</p><div id="nested-shadow-host"></div></div>';
+    var nestedShadow1 = shadow2.querySelector('#nested-shadow-host').attachShadow({mode: 'open'});
+    nestedShadow1.innerHTML = '<div id="nested-shadow-content"><p>Nested Shadow Root</p></div>';	
+	var wrapper=[];
 		var shadow=[];
 		var samplev = Math.floor(Math.random() * 100);
 			var k =12;
