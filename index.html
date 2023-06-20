@@ -14,6 +14,9 @@
 		var k =12;
 	 wrapper[0] = document.createElement('div');
 	shadow[0] = wrapper[0].attachShadow({ mode: 'open' });
+	
+	 wrapper[0] = document.createElement('div');
+	shadow[1] = wrapper[0].attachShadow({ mode: 'open' });
 	shadow[0].innerHTML="";
 		for (let i = 0; i < 2; i++) {
 			
@@ -31,6 +34,27 @@
 			allButtons[0].setAttribute("aboli"+samplev,"");
 			for(let j = 1; j < allButtons.length; j++) {
 				allButtons[j].setAttribute("aboli"+samplev,"aa")
+			}
+    		console.log(z)
+			
+		}
+	    shadow[1].innerHTML="";
+		for (let i = 0; i < 2; i++) {
+			
+			 
+			let para = document.createElement('p');
+			para.setAttribute("id", i)
+			shadow[0].appendChild(para);
+			shadow[0].innerHTML =shadow[0].innerHTML+ '<a aboli+1 = "aboli122">hello1  </a><div id="xy233333z"><a>hello </a><input type="password" style= "margin-bottom: 30px; width: 50%;border: 3px solid pink;display:block; padding: 10px;" id = "Aboli"></input><button></button></div>'
+			document.body.appendChild(wrapper[0])
+            var z= document.getElementsByTagName('div')[0].shadowRoot.querySelector('div').setAttribute("aboli"+samplev,"")
+	    var allButtons = document.body.getElementsByTagName('div')[0].shadowRoot.querySelectorAll('button');
+			//var linkk = document.body.getElementsByTagName('div')[0].shadowRoot.querySelectorAll('a');
+			document.getElementsByTagName('div')[0].shadowRoot.querySelectorAll('a')[0].setAttribute("aboli1"+samplev,"");
+			//linkk[0].setAttribute("aboli"+samplev,"aa");
+			allButtons[0].setAttribute("aboli"+samplev,"");
+			for(let j = 1; j < allButtons.length; j++) {
+				allButtons[j].setAttribute("aboli111212newaa")
 			}
     		console.log(z)
 			
